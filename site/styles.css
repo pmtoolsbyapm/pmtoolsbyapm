@@ -499,3 +499,5 @@ a:focus-visible,button:focus-visible,input:focus-visible{
   *{animation:none !important;transition:none !important;scroll-behavior:auto !important}
   .rv{opacity:1;transform:none}
 }
+.product-actions{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center}
+.risk-product .teaser-img img{filter:saturate(.8) contrast(1.05)}
