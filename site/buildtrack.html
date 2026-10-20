@@ -140,8 +140,8 @@
     <div class="eyebrow eyebrow-lt eyebrow-c">Newsletter</div>
     <h2 class="display">Notes from the field.</h2>
     <p>FIDIC cases, quality systems, schedule control, and new tools. Written from real projects, not from a classroom. No filler, and nothing you could have found in a textbook.</p>
-    <form class="news-form" onsubmit="return false;">
-      <input type="email" placeholder="your@email.com" aria-label="Email address" required>
+    <form class="news-form" action="https://app.kit.com/forms/10074070/subscriptions" method="post">
+      <input type="email" name="email_address" placeholder="your@email.com" aria-label="Email address" required>
       <button type="submit" class="btn btn-white">Subscribe</button>
     </form>
     <div class="news-note">NO SPAM &middot; UNSUBSCRIBE ANY TIME</div>
@@ -200,4 +200,5 @@
   document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
 })();
 </script>
+<script src="newsletter.js" defer></script>
 </body></html>
