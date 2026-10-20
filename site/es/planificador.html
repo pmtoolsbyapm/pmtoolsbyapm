@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Planificador de Proyectos — Cronogramas de construcción sin MS Project | PM Tools by a PM</title>
+<meta name="description" content="Construya, actualice e informe un cronograma de construcción profesional sin aprender MS Project ni Primavera P6. Ruta crítica, línea base, avance, actividades a 2 y 4 semanas, Excel y XML de MS Project. Español e inglés.">
+<link rel="canonical" href="https://www.pmtoolsbyapm.com/es/planificador.html">
+<link rel="alternate" hreflang="en" href="https://www.pmtoolsbyapm.com/scheduler.html">
+<link rel="alternate" hreflang="es" href="https://www.pmtoolsbyapm.com/es/planificador.html">
+<link rel="alternate" hreflang="x-default" href="https://www.pmtoolsbyapm.com/scheduler.html">
+<meta property="og:title" content="Planificador de Proyectos — Cronogramas de construcción sin MS Project | PM Tools by a PM">
+<meta property="og:description" content="Construya, actualice e informe un cronograma de construcción profesional sin aprender MS Project ni Primavera P6. Ruta crítica, línea base, avance, actividades a 2 y 4 semanas, Excel y XML de MS Project. Español e inglés.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="PM Tools by a PM">
+<meta property="og:image" content="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1400&auto=format&fit=crop&q=80">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png">
+<link rel="stylesheet" href="../styles.css">
+<style>
+.nav-dropdown{position:relative}
+.nav-dropdown>a{cursor:pointer}
+.dropdown-menu{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:8px 0;min-width:180px;box-shadow:0 8px 24px rgba(0,0,0,.1);z-index:100;list-style:none;margin:0}
+.dropdown-menu li a{display:block;padding:10px 18px;color:#17212b;text-decoration:none;font-weight:600;white-space:nowrap}
+.dropdown-menu li a:hover{background:#f3f0fb;color:#6842b8}
+.nav-dropdown:hover .dropdown-menu{display:block}
+.sch-video{max-width:420px;margin:2.25rem auto 0;border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(23,33,43,.18);background:#17212b}
+.sch-video video{display:block;width:100%;height:auto}
+.sch-price{max-width:440px;margin:2.75rem auto 0}
+.sch-note{text-align:center;margin-top:1.1rem;color:var(--muted,#536273);font-size:.95rem}
+.sch-note a{color:#6842b8;font-weight:600}
+.sch-faq{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2.5rem}
+.sch-q{background:#fff;border:1px solid #e3ddd3;border-radius:14px;padding:1.1rem 1.3rem}
+.sch-q summary{font-weight:600;cursor:pointer;color:#17212b}
+.sch-q p{margin:.75rem 0 0;color:#536273}
+.sch-final{text-align:center}
+@media(max-width:760px){.sch-faq{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <a href="index.html" class="brand"><span class="brand-mark"><img src="../images/logo-mark.png" alt="" width="32" height="32"></span><span class="brand-name">PM Tools <span class="bn-pu">by a PM</span></span></a>
+  <button class="burger" aria-label="Menu" aria-expanded="false" id="burger">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+  <nav><ul class="nav-links" id="navlinks"><li class="nav-dropdown"><a href="#">Productos ▾</a><ul class="dropdown-menu"><li><a href="planificador.html">Planificador</a></li><li><a href="../risk.html">Chequeo de riesgos</a></li><li><a href="buildtrack.html">BuildTrack</a></li></ul></li><li><a href="recursos.html">Recursos</a></li><li><a href="articulos.html">Artículos</a></li><li><a href="acerca.html">Acerca de</a></li><li><a href="contacto.html">Contacto</a></li><li><a href="../scheduler.html" class="lang" hreflang="en" title="Read in English">EN</a></li><li><a href="https://schedule.pmtoolsbyapm.com" target="_blank" rel="noopener" class="nav-cta">Probar la demo</a></li></ul></nav>
+</header>
+<section class="phead">
+  <div class="wrap">
+    <div class="eyebrow">Software</div>
+    <h1 class="display">Planificador de Proyectos</h1>
+    <p class="lead">No necesita aprender un software para gestionar su proyecto. Construya un cronograma profesional, actualícelo con el avance real e infórmelo al cliente, sin un curso de MS Project ni de Primavera P6.</p>
+    <div style="margin-top:1.75rem;display:flex;gap:.8rem;flex-wrap:wrap">
+      <a href="https://schedule.pmtoolsbyapm.com" target="_blank" rel="noopener" class="btn btn-solid">Probar la demo en vivo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="#pricing" class="btn btn-line">Ver precio</a>
+    </div>
+    <div class="ctrl"><span>REF: SCH-001</span><span class="sep">/</span><span>ESTADO: <span class="hi">EN LÍNEA</span></span><span class="sep">/</span><span>LICENCIA 365 DÍAS</span><span class="sep">/</span><span>ES / EN</span></div>
+  </div>
+</section>
+
+<section class="teaser rv">
+  <div class="teaser-img">
+    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1000&auto=format&fit=crop&q=80" alt="" loading="lazy">
+    <div class="teaser-stamp"><span class="dot dot-live"></span>EN LÍNEA</div>
+  </div>
+  <div class="teaser-body">
+    <div class="eyebrow">Por qué existe</div>
+    <h3 class="display">El cronograma nunca fue<br>la parte difícil.</h3>
+    <p>La mayoría de los gerentes de proyecto con los que he trabajado saben exactamente cómo debe secuenciarse su obra. Lo que los detiene es el software. MS Project y P6 se construyeron para planificadores, y a todos los demás se les exige pasar semanas aprendiendo menús antes de poder responder una pregunta sencilla: ¿cuándo terminamos y qué lo está determinando?</p>
+    <p>Entonces el cronograma se le entrega a otra persona, queda desactualizado al segundo mes y el cliente recibe un diagrama de barras en el que nadie en obra cree. El Planificador quita el software del camino. Usted piensa en trabajos, secuencia y avance. Él hace el cálculo de la ruta crítica y le explica, en lenguaje claro, lo que encontró.</p>
+    <div class="ctrl"><span>ORIGEN: OBRA</span><span class="sep">/</span><span>HECHO PARA GERENTES, NO PARA PLANIFICADORES</span></div>
+  </div>
+</section>
+
+<section class="sec" id="see-it">
+  <div class="wrap" style="text-align:center">
+    <div class="eyebrow eyebrow-c">Véalo funcionando</div>
+    <h2 class="display">Noventa segundos.<br>Sin discurso de venta.</h2>
+    <div class="sch-video">
+      <video controls playsinline preload="metadata">
+        <source src="../videos/scheduler-reel-es.mp4" type="video/mp4" onerror="var s=document.getElementById('see-it');if(s)s.remove();">
+      </video>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-ink">
+  <div class="wrap">
+    <div class="eyebrow eyebrow-lt">Qué hace</div>
+    <h2 class="display" style="color:#fff">Desde la primera actividad<br>hasta el informe mensual.</h2>
+    <p class="lead lead-lt">Cada función sigue la forma en que realmente avanza un proyecto: planificarlo, acordarlo, actualizarlo, explicarlo.</p>
+    <div class="grid-4" style="margin-top:2.75rem"><div class="fcard rv"><div class="k">Planificación</div><h4>Trabaje con sus propios términos</h4><p>Paquetes de trabajo y actividades. Duraciones a partir de cantidades y rendimientos, con cada supuesto señalado hasta que se confirme.</p></div><div class="fcard rv"><div class="k">Lógica</div><h4>Relacione el trabajo</h4><p>Fin-inicio, inicio-inicio, fin-fin e inicio-fin, con desfases en días laborables. Los bucles lógicos se rechazan antes de causar daño.</p></div><div class="fcard rv"><div class="k">Ruta crítica</div><h4>Sepa qué determina el fin</h4><p>Fechas tempranas y tardías, holgura y actividades determinantes, explicadas en lenguaje claro en lugar de una columna de números.</p></div><div class="fcard rv"><div class="k">Gantt</div><h4>Mueva el trabajo y luego decida</h4><p>Arrastre el trabajo no iniciado en el Gantt. El cambio vuelve como una propuesta que usted revisa antes de aplicar nada.</p></div><div class="fcard rv"><div class="k">Línea base</div><h4>Acuerde el plan y mida contra él</h4><p>Guarde el programa acordado como línea base. El retraso previsto se muestra contra ella en el Gantt y en cada informe.</p></div><div class="fcard rv"><div class="k">Avance</div><h4>Una actualización honesta por período</h4><p>Defina una fecha de estado, registre fechas reales, porcentaje y duración restante, y guarde la actualización una sola vez. El trabajo fuera de secuencia se señala.</p></div><div class="fcard rv"><div class="k">Salud</div><h4>Un cronograma que se revisa solo</h4><p>Holgura negativa, relaciones faltantes, actividades largas, desfases sin explicación y déficit de avance, cada uno con su motivo y la siguiente acción.</p></div><div class="fcard rv"><div class="k">Próximas semanas</div><h4>Listo para la reunión de obra</h4><p>Actividades pendientes a dos y cuatro semanas, imprimibles para la reunión de coordinación del lunes.</p></div><div class="fcard rv"><div class="k">Informes</div><h4>El informe al cliente, ya redactado</h4><p>Informe de gestión con fecha prevista de terminación, margen frente al fin requerido, hitos, puntos de atención y lo que cambió.</p></div><div class="fcard rv"><div class="k">Excel</div><h4>Un libro que la gente puede leer</h4><p>Exportación con formato: cronograma, predecesoras, fechas reales, línea base, actividades a 2 y 4 semanas, hallazgos y calendario.</p></div><div class="fcard rv"><div class="k">MS Project</div><h4>Compatible con lo que usa el cliente</h4><p>Importe un cronograma desde XML de MS Project, Excel o CSV. Exporte XML para el cliente, con toda pérdida de información declarada antes de aceptar.</p></div><div class="fcard rv"><div class="k">Bilingüe</div><h4>Español e inglés</h4><p>Cambie de idioma en cualquier momento. La interfaz, los hallazgos y los informes lo siguen. Los datos de su proyecto quedan tal como los ingresó.</p></div></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="grid-2" style="gap:3.5rem;align-items:center">
+      <div>
+        <div class="eyebrow eyebrow-am">Para quién es</div>
+        <h2 class="display">Hecho para quienes<br>dirigen la obra.</h2>
+        <p class="lead" style="margin-top:1rem">Gerentes de proyecto, consultores, contratistas e ingenieros de obra que necesitan un programa creíble y una actualización mensual, y no tienen un planificador en la nómina.</p>
+        <div class="creds"><div class="cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Usted gestiona el proyecto, no el software</div><div class="cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Informa cada mes a un cliente o al Ingeniero</div><div class="cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Heredó un cronograma en el que no confía</div><div class="cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Trabaja entre español e inglés</div></div>
+      </div>
+      <div class="quote-panel">
+        <blockquote>El cliente nunca me pidió un diagrama de barras más bonito. Me preguntó cuándo íbamos a terminar y qué lo estaba impidiendo. La herramienta debe responder esa pregunta, no obligarlo a aprender otra.</blockquote>
+        <div class="quote-attr">
+          <div class="r">Fundadora</div>
+          <div class="n">PM Tools by a PM</div>
+          <div class="d">Ingeniero, PMP &middot; 20+ años</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-fog" id="pricing">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:.5rem"><div class="eyebrow eyebrow-c">Precio</div></div>
+    <h2 class="display" style="text-align:center">Una licencia. Todo incluido.</h2>
+    <p class="lead" style="text-align:center;margin:.9rem auto 0">Sin niveles ni funciones reservadas. Pruebe la demo completa primero y compre cuando esté listo para usarlo en su propio proyecto.</p>
+    <div class="sch-price">
+      <div class="price hot rv">
+        <div class="tier">Licencia individual</div>
+        <div class="amt"><sup>$</sup>149<sub>/año</sub></div>
+        <p class="blurb">Un profesional, proyectos ilimitados, durante 365 días desde la compra.</p>
+        <hr>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Proyectos ilimitados</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Ruta crítica, línea base y actualizaciones de avance</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Salud del cronograma y actividades a 2/4 semanas</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Informe de gestión, Excel y PDF</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Importación y exportación XML de MS Project</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Español e inglés</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Funciona sin conexión una vez abierto</li></ul>
+        <a href="https://pmtools2.gumroad.com/l/project-scheduler" target="_blank" rel="noopener" class="btn btn-solid">Comprar la licencia</a>
+      </div>
+      <p class="sch-note">¿Aún no está seguro? <a href="https://schedule.pmtoolsbyapm.com" target="_blank" rel="noopener">Abra la demo</a>, sin crear cuenta.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Preguntas</div>
+    <h2 class="display">Antes de comprar.</h2>
+    <div class="sch-faq"><details class="sch-q"><summary>¿Necesito MS Project o Primavera P6?</summary><p>No. El Planificador calcula la ruta crítica por sí mismo. Si su cliente trabaja en MS Project, puede exportar un archivo XML que podrá abrir.</p></details><details class="sch-q"><summary>¿Puedo traer un cronograma que ya tengo?</summary><p>Sí. Importe desde XML de MS Project, Excel o CSV. Usted revisa las fechas, advertencias y todo lo que no pudo trasladarse antes de aceptar la importación.</p></details><details class="sch-q"><summary>¿Dónde se guardan los datos del proyecto?</summary><p>En su navegador, en su dispositivo. Nada se guarda en nuestros servidores. Exporte una copia de respaldo con regularidad y conserve sus documentos originales por separado.</p></details><details class="sch-q"><summary>¿Funciona sin internet?</summary><p>Iniciar sesión y conectar la licencia requieren internet. Una vez abierto el Planificador, el espacio de programación funciona sin conexión.</p></details><details class="sch-q"><summary>¿Cómo funciona la licencia?</summary><p>Compre en Gumroad, inicie sesión con el mismo correo de la compra e ingrese su clave de licencia una sola vez. La licencia dura 365 días desde la compra.</p></details><details class="sch-q"><summary>¿Sirve para programas muy grandes?</summary><p>Está hecho para los proyectos que la mayoría de los gerentes realmente dirigen. No nivela recursos ni maneja varios calendarios por actividad. Para un programa EPC de 5.000 actividades con un equipo de planificación dedicado, siga con P6.</p></details></div>
+  </div>
+</section>
+
+<section class="sec sec-fog sch-final">
+  <div class="wrap">
+    <h2 class="display">Deje de aprender software.<br>Empiece a dirigir el proyecto.</h2>
+    <div style="margin-top:1.75rem;display:flex;gap:.8rem;flex-wrap:wrap;justify-content:center">
+      <a href="https://schedule.pmtoolsbyapm.com" target="_blank" rel="noopener" class="btn btn-solid">Probar la demo en vivo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="https://pmtools2.gumroad.com/l/project-scheduler" target="_blank" rel="noopener" class="btn btn-line">Comprar la licencia</a>
+    </div>
+  </div>
+</section>
+<section class="news">
+  <div class="news-in">
+    <div class="eyebrow eyebrow-lt eyebrow-c">Boletín</div>
+    <h2 class="display">Notas desde la obra.</h2>
+    <p>Casos FIDIC, sistemas de calidad, control de cronogramas y nuevas herramientas. Escrito desde proyectos reales, no desde un aula.</p>
+    <form class="news-form" onsubmit="return false;">
+      <input type="email" placeholder="su@correo.com" aria-label="Correo electrónico" required>
+      <button type="submit" class="btn btn-white">Suscribirme</button>
+    </form>
+    <div class="news-note">SIN SPAM &middot; CANCELE CUANDO QUIERA</div>
+  </div>
+</section>
+<footer class="foot">
+  <div class="foot-top">
+    <div class="foot-brand">
+      <div class="brand"><span class="brand-mark"><img src="../images/logo-badge.png" alt="" width="32" height="32"></span><span class="brand-name">PM Tools <span class="bn-pu">by a PM</span></span></div>
+      <p>Herramientas y conocimiento de gestión de proyectos, construidos sobre veinte años dirigiendo proyectos reales. Ingeniero, certificación PMP.</p>
+      <div class="ctrl ctrl-dark"><span>DESDE 2026</span><span class="sep">/</span><span>GLOBAL</span></div>
+    </div>
+    <div class="foot-col"><h5>Productos</h5><ul><li><a href="planificador.html">Planificador</a></li><li><a href="buildtrack.html">BuildTrack</a></li><li><a href="../risk.html">Chequeo de riesgos</a></li><li><a href="recursos.html">Descargas gratuitas</a></li><li><a href="recursos.html#pago">Plantillas y guías</a></li></ul></div><div class="foot-col"><h5>Artículos</h5><ul><li><a href="articulo-silencio.html">Contratos FIDIC</a></li><li><a href="articulo-auditoria.html">Gestión de calidad</a></li><li><a href="articulo-holgura.html">Control del cronograma</a></li><li><a href="articulos.html">Todos los artículos</a></li></ul></div>
+    <div class="foot-col">
+      <h5>Contacto</h5>
+      <ul>
+        <li><a href="mailto:support@pmtoolsbyapm.com">support@pmtoolsbyapm.com</a></li>
+        <li><a href="https://linkedin.com/company/pmtoolsbyapm" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://instagram.com/pmtoolsbyapm" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="../scheduler.html" hreflang="en">English version</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <span>&copy; 2026 PM TOOLS BY A PM &middot; TODOS LOS DERECHOS RESERVADOS</span>
+    <span>PMTOOLSBYAPM.COM</span>
+  </div>
+</footer>
+<script>
+(function(){
+  var b=document.getElementById('burger'),n=document.getElementById('navlinks');
+  if(b&&n){b.addEventListener('click',function(){
+    var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);
+  });}
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.1});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+})();
+</script>
+</body></html>
