@@ -1,4 +1,4 @@
-Place the Scheduler reels here:
-  scheduler-reel-en.mp4
-  scheduler-reel-es.mp4
-The "See it working" section on the Scheduler pages hides itself until the file exists.
+Website videos (landscape 1920x1080, compressed for web):
+  scheduler-launch-en.mp4 / .jpg  -> scheduler.html
+  scheduler-launch-es.mp4 / .jpg  -> es/planificador.html
+The video section hides itself if the file is missing.
