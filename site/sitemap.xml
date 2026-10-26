@@ -18,6 +18,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.pmtoolsbyapm.com/diagnostic.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.pmtoolsbyapm.com/resources.html</loc>
     <lastmod>2026-08-12</lastmod>
     <priority>0.7</priority>
@@ -62,6 +67,11 @@
   <url>
     <loc>https://www.pmtoolsbyapm.com/es/articulos.html</loc>
     <lastmod>2026-08-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.pmtoolsbyapm.com/es/diagnostico.html</loc>
+    <lastmod>2026-10-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
