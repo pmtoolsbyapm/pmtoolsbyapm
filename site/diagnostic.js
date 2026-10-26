@@ -35,7 +35,15 @@
       newsH: 'More on the problems you just recognised',
       newsP: 'I write about exactly these situations: reporting that eats the week, schedules that warn too late, risk actions nobody closes, and the records that decide a claim. Occasional, practical, no filler.',
       newsBtn: 'Subscribe', newsNote: 'NO SPAM · UNSUBSCRIBE ANY TIME',
-      privacy: 'Your answers stay in this browser. Nothing is sent unless you choose to subscribe.'
+      privacy: 'Your answers stay in this browser. If you ask for the full breakdown, only your email and your main problem areas are sent to my mailing list.',
+      gateK: 'Your full breakdown is ready',
+      gateH: 'See what is behind each one, and what to do about it',
+      gateP: 'For each area: why it happens on projects like yours, what helps, and which tools fit. Enter your email and the breakdown opens here straight away. You will also get my occasional notes from the field.',
+      gateList: 'Inside your breakdown',
+      gatePh: 'your@email.com', gateBtn: 'Show my breakdown', gateSending: 'Opening…',
+      gateBad: 'Please enter a valid email address.',
+      gateErr: 'That did not go through. Try again or write to support@pmtoolsbyapm.com.',
+      gateSmall: 'Only your email and your main problem areas are sent. No spam; unsubscribe any time.'
     },
     levels: { bad: 'Bottleneck', watch: 'Worth watching', ok: 'In good shape' },
     allGood: {
@@ -208,7 +216,15 @@
       newsH: 'Más sobre los problemas que acabas de reconocer',
       newsP: 'Escribo justamente sobre estas situaciones: informes que se comen la semana, cronogramas que avisan tarde, acciones de riesgo que nadie cierra y los registros que deciden un reclamo. De vez en cuando, práctico y sin relleno.',
       newsBtn: 'Suscribirme', newsNote: 'SIN SPAM · CANCELA CUANDO QUIERAS',
-      privacy: 'Tus respuestas se quedan en este navegador. No se envía nada a menos que decidas suscribirte.'
+      privacy: 'Tus respuestas se quedan en este navegador. Si pides el análisis completo, solo se envían a mi lista tu correo y tus principales áreas de problema.',
+      gateK: 'Tu análisis completo está listo',
+      gateH: 'Descubre qué hay detrás de cada una y qué hacer al respecto',
+      gateP: 'Para cada área: por qué pasa en proyectos como el tuyo, qué ayuda y qué herramientas encajan. Escribe tu correo y el análisis se abre aquí mismo. También recibirás, de vez en cuando, mis notas desde la obra.',
+      gateList: 'Lo que incluye tu análisis',
+      gatePh: 'tu@correo.com', gateBtn: 'Ver mi análisis', gateSending: 'Abriendo…',
+      gateBad: 'Escribe un correo válido.',
+      gateErr: 'No se pudo completar. Inténtalo de nuevo o escribe a support@pmtoolsbyapm.com.',
+      gateSmall: 'Solo se envían tu correo y tus principales áreas de problema. Sin spam; cancela cuando quieras.'
     },
     levels: { bad: 'Cuello de botella', watch: 'Vale la pena vigilar', ok: 'Bien' },
     allGood: {
@@ -511,6 +527,33 @@
     return h + '</div></article>';
   }
 
+  /* ───────────── EMAIL GATE (Kit) ───────────── */
+  var ACTION = 'https://app.kit.com/forms/10074070/subscriptions';
+  var KEY = 'pmt_subscribed';
+  function known() { try { return localStorage.getItem(KEY) === '1'; } catch (e) { return false; } }
+  function remember() { try { localStorage.setItem(KEY, '1'); } catch (e) {} }
+  function send(body) {
+    return fetch(ACTION, { method: 'POST', body: body, headers: { Accept: 'application/json' } })
+      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { if (!r.ok || (j.status && j.status !== 'success')) throw new Error('rejected'); }); })
+      .catch(function (e) {
+        if (e && e.message === 'rejected') throw e;
+        return fetch(ACTION, { method: 'POST', body: body, mode: 'no-cors' });   // response unreadable, request still reaches Kit
+      });
+  }
+  var unlocked = known();
+  function hideNews() { var nw = results.querySelector('.dx-news'); if (nw) nw.hidden = true; }
+
+  function gateCard(R) {
+    return '<div class="dx-gate" data-gate><div class="k">' + C.ui.gateK + '</div>' +
+      '<h3 class="display">' + C.ui.gateH + '</h3><p>' + C.ui.gateP + '</p>' +
+      '<div class="dx-gate-list"><div class="k2">' + C.ui.gateList + '</div><ul>' +
+      R.flagged.map(function (r) { var T = C.areas[r.key]; return '<li><span class="dx-chip dx-chip-' + r.level + '">' + C.levels[r.level] + '</span>' + esc(r.level === 'bad' ? T.bad : T.watch) + '</li>'; }).join('') +
+      '</ul></div>' +
+      '<form novalidate class="dx-gate-form"><input type="email" name="email_address" required placeholder="' + C.ui.gatePh + '" aria-label="Email" autocomplete="email">' +
+      '<button type="submit" class="btn btn-solid">' + C.ui.gateBtn + '</button></form>' +
+      '<p class="dx-gate-msg" role="status" data-msg></p><p class="dx-gate-small">' + C.ui.gateSmall + '</p></div>';
+  }
+
   function showResults() {
     var R = score();
     stage.hidden = true;
@@ -535,6 +578,8 @@
           '<div class="d">' + stat.label + '</div></div>';
       }
       html += '</div>';
+      if (!unlocked) html += gateCard(R);
+      html += '<div data-full' + (unlocked ? '' : ' hidden') + '>';
       R.flagged.forEach(function (r, i) {
         if (i === 1) html += '<div class="eyebrow dx-sub">' + C.ui.alsoTwo + '</div>';
         html += areaCard(r, i === 0);
@@ -546,10 +591,37 @@
 
     html += '<div class="dx-actions"><button type="button" class="btn btn-line" data-print>' + C.ui.print + '</button>' +
       '<button type="button" class="btn btn-line" data-restart>' + C.ui.restart + '</button></div>' +
-      '<p class="dx-method">' + C.ui.method + '</p>';
+      '<p class="dx-method">' + C.ui.method + '</p>' + (R.flagged.length ? '</div>' : '');
 
     results.querySelector('[data-out]').innerHTML = html;
     results.hidden = false;
+    if (unlocked) hideNews();
+    var gate = results.querySelector('[data-gate]');
+    if (gate) {
+      // the full breakdown and the newsletter box wait behind the gate
+      var nw = results.querySelector('.dx-news'); if (nw) nw.hidden = true;
+      gate.querySelector('form').addEventListener('submit', function (ev) {
+        ev.preventDefault();
+        var input = ev.target.querySelector('input'), b = ev.target.querySelector('button'), msg = gate.querySelector('[data-msg]');
+        var email = input.value.trim();
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { msg.textContent = C.ui.gateBad; input.focus(); return; }
+        msg.textContent = ''; b.disabled = true; var label = b.textContent; b.textContent = C.ui.gateSending;
+        var body = new FormData();
+        body.append('email_address', email);
+        // segmentation in Kit: create custom fields with these keys to keep the values
+        body.append('fields[diagnostic_top]', R.flagged[0].key);
+        body.append('fields[diagnostic_areas]', R.flagged.map(function (r) { return r.key + ':' + r.level; }).join(', '));
+        body.append('fields[diagnostic_lang]', ES ? 'es' : 'en');
+        send(body).then(function () {
+          remember(); unlocked = true;
+          gate.remove();
+          var full = results.querySelector('[data-full]'); full.hidden = false;
+          var first = full.querySelector('.dx-area h3'); if (first) { first.setAttribute('tabindex', '-1'); first.focus({ preventScroll: true }); }
+          full.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }).catch(function () { msg.textContent = C.ui.gateErr; })
+          .then(function () { b.disabled = false; b.textContent = label; });
+      });
+    }
     results.querySelector('[data-restart]').addEventListener('click', function () {
       answers = {}; step = 0; results.hidden = true; renderQ();
       var h = stage.querySelector('h2'); if (h) h.focus({ preventScroll: true });
