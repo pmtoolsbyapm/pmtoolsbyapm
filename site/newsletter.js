@@ -1,7 +1,7 @@
-/* Newsletter signup → Kit (English form 10074070, Spanish form 10693766). Keeps the site's own design. */
+/* Newsletter signup → Kit (English form 10074070, Spanish form 10102358). Keeps the site's own design. */
 (function () {
   var es = (document.documentElement.lang || '').toLowerCase().indexOf('es') === 0;
-  var ACTION = 'https://app.kit.com/forms/' + (es ? '10693766' : '10074070') + '/subscriptions';
+  var ACTION = 'https://app.kit.com/forms/' + (es ? '10102358' : '10074070') + '/subscriptions';
   var T = es ? {
     sending: 'Enviando…',
     ok: '¡Listo! Revisa tu correo y confirma tu suscripción.',
