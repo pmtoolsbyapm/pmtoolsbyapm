@@ -628,3 +628,30 @@ i.dx-ok{background:rgba(255,255,255,.3)}
   .dx-summary h2,.dx-bar .l,.dx-stat .d{color:#000 !important}
   .dx-area{break-inside:avoid;box-shadow:none}
 }
+
+/* Scheduler editions (scheduler.html, es/planificador.html, homepage) */
+.ed-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;max-width:880px;margin:2.75rem auto 0;align-items:stretch}
+.price.ed{display:flex;flex-direction:column}
+.price.ed ul{flex:1}
+.price.ed ul li strong{color:var(--ink);font-weight:600}
+.ed-btns{display:flex;flex-direction:column;gap:.55rem;margin-top:1.6rem}
+.ed-btns .btn{width:100%;justify-content:center;margin-top:0}
+.price.ed-pro{background:linear-gradient(180deg,var(--purple-soft) 0%,var(--paper) 38%)}
+.price.ed-pro .tier{color:var(--purple)}
+.sch-final .sch-note{margin-top:1.3rem}
+.ed-mini{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:0 0 1.4rem;max-width:520px}
+.ed-m{border:1px solid var(--line-dk);border-radius:10px;padding:.85rem .95rem;background:var(--paper)}
+.ed-m-pro{border:1.5px solid var(--purple);box-shadow:0 0 0 3px var(--purple-soft)}
+.ed-m-top{display:flex;justify-content:space-between;align-items:baseline;gap:.5rem}
+.ed-m-name{font-family:'Archivo',sans-serif;font-weight:800;color:var(--ink);font-size:.98rem;display:flex;align-items:center;gap:.4rem}
+.ed-m-badge{font-family:'IBM Plex Mono',monospace;font-size:.55rem;font-weight:500;letter-spacing:.1em;background:var(--purple);color:#fff;border-radius:4px;padding:.12rem .4rem}
+.ed-m-amt{font-family:'Archivo',sans-serif;font-weight:800;color:var(--ink);font-size:1.05rem;letter-spacing:-.02em}
+.ed-m-amt small{font-family:'DM Sans',sans-serif;font-weight:400;font-size:.7rem;color:var(--muted)}
+.teaser .ed-m p{font-size:.76rem;color:var(--muted);line-height:1.45;margin:.3rem 0 .6rem;max-width:none}
+.ed-m-links{display:flex;gap:.9rem}
+.ed-m-links a{font-size:.82rem;font-weight:500;color:var(--purple);text-decoration:none}
+.ed-m-links a:first-child{color:#fff;background:var(--purple);border-radius:5px;padding:.22rem .7rem}
+.ed-m-links a:hover{text-decoration:underline}
+.ed-m-links a:first-child:hover{background:var(--purple-mid);text-decoration:none}
+@media(max-width:760px){.ed-grid{grid-template-columns:1fr;max-width:460px}}
+@media(max-width:420px){.ed-mini{grid-template-columns:1fr}}
