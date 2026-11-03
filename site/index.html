@@ -31,6 +31,9 @@
 .dropdown-menu li a:hover{background:#f3f0fb;color:#6842b8}
 .nav-dropdown:hover .dropdown-menu{display:block}
 </style>
+<style>.nav .nav-dropdown{position:relative}.nav .dropdown-menu{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:8px 0;min-width:180px;box-shadow:0 8px 24px rgba(0,0,0,.1);z-index:210;list-style:none;margin:0}.nav .dropdown-menu li a{display:block;padding:10px 18px;color:#17212b;text-decoration:none;white-space:nowrap}.nav .dropdown-menu li a:hover{background:#f3f0fb;color:#6842b8}.nav .nav-dropdown:hover .dropdown-menu,.nav .nav-dropdown:focus-within .dropdown-menu{display:block}
+@media(max-width:1000px){.nav{padding:0 1.25rem}.nav .burger{display:block}.nav .nav-links{display:none;position:fixed;top:66px;left:0;right:0;background:#fff;border-bottom:1px solid #E4E4EF;flex-direction:column;align-items:stretch;gap:0;padding:.5rem 0;max-height:calc(100dvh - 66px);overflow-y:auto}.nav .nav-links.open{display:flex}.nav .nav-links li{border-bottom:1px solid #E4E4EF}.nav .nav-links a{display:block;padding:.85rem 1.25rem}.nav .dropdown-menu{position:static;box-shadow:none;border:0;border-radius:0}.nav .dropdown-menu li a{padding:.65rem 2rem}.nav .nav-links .lang{display:inline-block;margin:.5rem 1.25rem;padding:.28rem .5rem}.nav .nav-links li:last-child{padding:0}}
+</style>
 </head>
 <body>
 <header class="nav">
@@ -38,7 +41,7 @@
   <button class="burger" aria-label="Menu" aria-expanded="false" id="burger">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
   </button>
-  <nav><ul class="nav-links" id="navlinks"><li class="nav-dropdown"><a href="#">Products ▾</a><ul class="dropdown-menu"><li><a href="scheduler.html">Project Scheduler</a></li><li><a href="starter-kit.html">PM Starter Kit</a></li><li><a href="risk.html">Risk Health Check</a></li><li><a href="buildtrack.html">BuildTrack</a></li></ul></li><li><a href="resources.html">Resources</a></li><li><a href="diagnostic.html">Diagnostic</a></li><li><a href="knowledge.html">Knowledge</a></li><li><a href="about.html">About</a></li><li><a href="#implementation-services">Services</a></li><li><a href="contact.html">Contact</a></li><li><a href="es/index.html" class="lang" hreflang="es" title="Leer en español">ES</a></li></ul></nav>
+  <nav><ul class="nav-links" id="navlinks"><li class="nav-dropdown"><a href="#">Products ▾</a><ul class="dropdown-menu"><li><a href="scheduler.html">Project Scheduler</a></li><li><a href="starter-kit.html">PM Starter Kit</a></li><li><a href="risk.html">Risk Health Check</a></li><li><a href="buildtrack.html">BuildTrack</a></li></ul></li><li><a href="resources.html">Resources</a></li><li><a href="diagnostic.html">Diagnostic</a></li><li><a href="knowledge.html">Knowledge</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li><li><a href="es/index.html" class="lang" hreflang="es" title="Leer en español">ES</a></li></ul></nav>
 </header>
 <section class="hero">
   <div class="hero-l">
@@ -106,7 +109,7 @@
       <p>Build a professional schedule, update it with real progress and report it to the client, without a course in MS Project or P6. Critical path, baseline, look-aheads and the monthly report, in English or Spanish.</p>
       <div class="chips"><span class="chip">Critical path</span><span class="chip">Progress updates</span><span class="chip">MS Project XML</span><span class="chip">EN / ES</span></div>
       <div class="ctrl"><span>REF: SCH-001</span><span class="sep">/</span><span>ANNUAL SUBSCRIPTION</span><span class="sep">/</span><span class="hi">LIVE</span></div>
-      <div class="ed-mini"><div class="ed-m"><div class="ed-m-top"><span class="ed-m-name">Standard</span><span class="ed-m-amt">$149<small>/yr</small></span></div><p>One device · offline · JSON backup</p><div class="ed-m-links"><a href="https://pmtools2.gumroad.com/l/POieEE_PYD2nZtfNNx5dLg" target="_blank" rel="noopener">Buy</a><a href="https://schedule.pmtoolsbyapm.com" target="_blank" rel="noopener">Try it</a></div></div><div class="ed-m ed-m-pro"><div class="ed-m-top"><span class="ed-m-name">Pro <span class="ed-m-badge">PRO</span></span><span class="ed-m-amt">$200<small>/yr</small></span></div><p>Cloud save · syncs across devices</p><div class="ed-m-links"><a href="https://pmtools2.gumroad.com/l/pm-scheduler-pro" target="_blank" rel="noopener">Buy</a><a href="https://schedule-pro.pmtoolsbyapm.com" target="_blank" rel="noopener">Try it</a></div></div></div><div class="product-actions"><a href="scheduler.html" class="btn btn-solid">Learn more<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+      <p>Choose Standard for offline work or Pro for cloud saves and syncing across devices. Explore the features and plans on the product page.</p><div class="product-actions"><a href="scheduler.html" class="btn btn-solid">Learn more<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
     </div></section>
 
 <section class="teaser rv teaser-alt risk-product"><div class="teaser-body">
@@ -169,37 +172,7 @@
     </div></section>
 
 
-<section class="sec" id="implementation-services" aria-labelledby="implementation-title" style="scroll-margin-top:6rem">
-  <div class="wrap">
-    <div class="eyebrow">Implementation Services</div>
-    <h2 class="display" id="implementation-title">Your Business. Your Processes.<br><span class="pu">The Right Project Management System.</span></h2>
-    <p class="lead">Reports held up by chasing updates. Data scattered across spreadsheets and emails. Schedules, risks and actions that are hard to see together. Start with the way your business works, then choose the tools and processes that help your team keep control.</p>
-    <div class="grid-2" style="gap:1.5rem;margin-top:2.5rem;align-items:start">
-      <div class="dl"><div class="dl-body">
-        <div class="eyebrow">01 / Improve what you have</div>
-        <h3>Optimize existing systems</h3>
-        <p>Make better use of Excel, Smartsheet, Microsoft Project and the tools your team already uses. Review data flows, simplify reporting, and improve schedule updates, risk follow-up and action ownership. Agree practical changes around your existing processes and licences.</p>
-      </div></div>
-      <div class="dl"><div class="dl-body">
-        <div class="eyebrow">02 / Adapt a proven starting point</div>
-        <h3>Customize PM Tools solutions</h3>
-        <p>Explore adapting Project Scheduler, BuildTrack or Risk Health Check to your workflow, reporting needs and terminology. The assessment establishes what is feasible and defines the scope. Existing PM Tools software remains licensed; customization does not transfer ownership of the underlying product.</p>
-      </div></div>
-      <div class="dl"><div class="dl-body">
-        <div class="eyebrow">03 / Build around your business</div>
-        <h3>Commission a tailored, client-owned application</h3>
-        <p>When existing tools do not fit, commission an application around your agreed requirements. The written agreement will define the bespoke deliverables and source code you own, the transfer conditions, and the handover. Any pre-existing components and third-party software will be identified separately with their licence terms; they are not included in the IP transfer.</p>
-      </div></div>
-      <div class="dl"><div class="dl-body">
-        <div class="eyebrow">Start with the problem</div>
-        <h3>Request an Assessment</h3>
-        <p>Tell us about your current tools, where reporting slows down, and what your team needs to see. We will discuss the fit and provide a private scope-based quotation before work begins. Implementation, customization, licences and support are agreed separately where required.</p>
-        <a class="btn btn-solid" href="mailto:support@pmtoolsbyapm.com?subject=Request%20an%20Assessment%20%E2%80%94%20Implementation%20Services&amp;body=Hello%2C%0D%0A%0D%0AI%20would%20like%20to%20request%20a%20project%20management%20systems%20assessment.%0D%0A%0D%0ABusiness%20%2F%20project%3A%0D%0ACurrent%20tools%3A%0D%0AMain%20reporting%2C%20data%2C%20schedule%2C%20risk%20or%20action-tracking%20problem%3A%0D%0AWhat%20we%20want%20to%20improve%3A%0D%0A%0D%0APlease%20contact%20me%20to%20discuss%20the%20scope%20and%20a%20private%20quotation.%0D%0A">Request an Assessment</a>
-        <p style="margin-top:1rem;margin-bottom:0;font-size:.9rem">Opens your email app. You can also write directly to <a href="mailto:support@pmtoolsbyapm.com">support@pmtoolsbyapm.com</a> or visit our <a href="contact.html">contact page</a>.</p>
-      </div></div>
-    </div>
-  </div>
-</section>
+<section class="sec sec-fog" id="implementation-services"><div class="wrap"><div class="eyebrow">Implementation Services</div><h2 class="display">Your Business. Your Processes.<br>The Right Project Management System.</h2><p class="lead">No time to set up the system? Stuck on formulas or chasing updates across files? Get help understanding your operation and adapting your existing tools, a PM Tools solution or a tailored application to what your business actually needs.</p><div class="hero-actions"><a href="services.html" class="btn btn-solid">Explore Implementation Services</a></div></div></section>
 
 <section class="sec sec-ink">
   <div class="wrap">

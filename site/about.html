@@ -31,6 +31,9 @@
 .dropdown-menu li a:hover{background:#f3f0fb;color:#6842b8}
 .nav-dropdown:hover .dropdown-menu{display:block}
 </style>
+<style>.nav .nav-dropdown{position:relative}.nav .dropdown-menu{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:8px 0;min-width:180px;box-shadow:0 8px 24px rgba(0,0,0,.1);z-index:210;list-style:none;margin:0}.nav .dropdown-menu li a{display:block;padding:10px 18px;color:#17212b;text-decoration:none;white-space:nowrap}.nav .dropdown-menu li a:hover{background:#f3f0fb;color:#6842b8}.nav .nav-dropdown:hover .dropdown-menu,.nav .nav-dropdown:focus-within .dropdown-menu{display:block}
+@media(max-width:1000px){.nav{padding:0 1.25rem}.nav .burger{display:block}.nav .nav-links{display:none;position:fixed;top:66px;left:0;right:0;background:#fff;border-bottom:1px solid #E4E4EF;flex-direction:column;align-items:stretch;gap:0;padding:.5rem 0;max-height:calc(100dvh - 66px);overflow-y:auto}.nav .nav-links.open{display:flex}.nav .nav-links li{border-bottom:1px solid #E4E4EF}.nav .nav-links a{display:block;padding:.85rem 1.25rem}.nav .dropdown-menu{position:static;box-shadow:none;border:0;border-radius:0}.nav .dropdown-menu li a{padding:.65rem 2rem}.nav .nav-links .lang{display:inline-block;margin:.5rem 1.25rem;padding:.28rem .5rem}.nav .nav-links li:last-child{padding:0}}
+</style>
 </head>
 <body>
 <header class="nav">
@@ -38,8 +41,7 @@
   <button class="burger" aria-label="Menu" aria-expanded="false" id="burger">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
   </button>
-  <nav><ul class="nav-links" id="navlinks"><li class="nav-dropdown"><a href="#">Products ▾</a><ul class="dropdown-menu"><li><a href="scheduler.html">Project Scheduler</a></li><li><a href="starter-kit.html">PM Starter Kit</a></li><li><a href="risk.html">Risk Health Check</a></li><li><a href="buildtrack.html">BuildTrack</a></li></ul></li>
-        <li><a href="risk.html">Risk Health Check</a></li><li><a href="resources.html">Resources</a></li><li><a href="diagnostic.html">Diagnostic</a></li><li><a href="knowledge.html">Knowledge</a></li><li><a href="about.html" class="on">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="es/acerca.html" class="lang" hreflang="es" title="Leer en español">ES</a></li><li><a href="https://buildtrack-eta.vercel.app" target="_blank" rel="noopener" class="nav-cta">Open BuildTrack</a></li></ul></nav>
+  <nav><ul class="nav-links" id="navlinks"><li class="nav-dropdown"><a href="#">Products ▾</a><ul class="dropdown-menu"><li><a href="scheduler.html">Project Scheduler</a></li><li><a href="starter-kit.html">PM Starter Kit</a></li><li><a href="risk.html">Risk Health Check</a></li><li><a href="buildtrack.html">BuildTrack</a></li></ul></li><li><a href="resources.html">Resources</a></li><li><a href="diagnostic.html">Diagnostic</a></li><li><a href="knowledge.html">Knowledge</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li><li><a href="es/acerca.html" class="lang" hreflang="es" title="Leer en español">ES</a></li></ul></nav>
 </header>
 <section class="phead">
   <div class="wrap">
