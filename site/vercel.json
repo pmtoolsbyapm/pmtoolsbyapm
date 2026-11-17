@@ -1,0 +1,7 @@
+{
+  "redirects": [
+    { "source": "/review", "destination": "/forecast-check.html", "permanent": false },
+    { "source": "/revision", "destination": "/es/revisar-prevision.html", "permanent": false },
+    { "source": "/es/revision", "destination": "/es/revisar-prevision.html", "permanent": false }
+  ]
+}
