@@ -102,7 +102,7 @@
     if (h.kind === 'late' && h.gap) {
       const g = h.gap;
       return box(L('WORTH CHECKING FIRST', 'VALE LA PENA REVISAR PRIMERO'),
-        L(`${esc(g.area)} is ready on ${D(g.readyFinish)}. ${esc(g.task.name)} starts on ${D(g.taskStart)}.`, `${esc(g.area)} está listo el ${D(g.readyFinish)}. ${esc(g.task.name)} empieza el ${D(g.taskStart)}.`),
+        L(`The work before it in ${esc(g.area)} finishes on ${D(g.readyFinish)}. ${esc(g.task.name)} starts on ${D(g.taskStart)}.`, `El trabajo previo en ${esc(g.area)} termina el ${D(g.readyFinish)}. ${esc(g.task.name)} empieza el ${D(g.taskStart)}.`),
         L(`${act(g.task)} is linked to “${esc(g.milestone.name)}”, a milestone that collects work from other areas, so it waits ${g.wait} working days after the last work in ${esc(g.area)}. If that link is what you intend, keep it. If it isn’t, this is where your time is, and no duration needs to change.`,
           `${act(g.task)} está relacionada con “${esc(g.milestone.name)}”, un hito que reúne trabajo de otras zonas, así que espera ${g.wait} días laborables después del último trabajo en ${esc(g.area)}. Si esa relación es intencional, mantenla. Si no lo es, aquí está tu tiempo, sin cambiar ninguna duración.`),
         row(`${act(g.ready)} ${L('finishes', 'termina')}`, D(g.readyFinish)) + `<div class="wait">${L(`${g.wait} working days waiting`, `${g.wait} días laborables de espera`)}</div>` + row(`${act(g.task)} ${L('starts', 'empieza')}`, D(g.taskStart)));
