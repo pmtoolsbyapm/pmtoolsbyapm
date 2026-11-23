@@ -42,7 +42,7 @@
   <button class="burger" aria-label="Menú" aria-expanded="false" id="burger">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
   </button>
-  <nav><ul class="nav-links" id="navlinks"><li class="nav-dropdown"><a href="#">Productos ▾</a><ul class="dropdown-menu"><li><a href="planificador.html">Planificador</a></li><li><a href="kit-inicial.html">PM Starter Kit</a></li><li><a href="../risk.html">Chequeo de riesgos</a></li><li><a href="buildtrack.html">BuildTrack</a></li><li><a href="https://cost-management.pmtoolsbyapm.com/welcome.html">Cost Management</a></li></ul></li><li><a href="recursos.html">Recursos</a></li><li><a href="diagnostico.html">Diagnóstico</a></li><li><a href="articulos.html">Artículos</a></li><li><a href="acerca.html">Acerca de</a></li><li><a href="servicios.html">Servicios</a></li><li><a href="contacto.html">Contacto</a></li><li><a href="../index.html" class="lang" hreflang="en" title="Read in English">EN</a></li></ul></nav>
+  <nav><ul class="nav-links" id="navlinks"><li class="nav-dropdown"><a href="#">Productos ▾</a><ul class="dropdown-menu"><li><a href="planificador.html">Planificador</a></li><li><a href="kit-inicial.html">PM Starter Kit</a></li><li><a href="../risk.html">Chequeo de riesgos</a></li><li><a href="buildtrack.html">BuildTrack</a></li><li><a href="https://cost-management.pmtoolsbyapm.com/welcome.html">Cost Management</a></li></ul></li><li><a href="recursos.html">Recursos</a></li><li class="nav-dropdown"><a href="diagnostico.html">Diagnóstico ▾</a><ul class="dropdown-menu"><li><a href="diagnostico.html">Diagnóstico del proyecto</a></li><li><a href="verificador-cronograma.html">Verificador de cronogramas</a></li><li><a href="revisar-prevision.html">Revisión guiada del cronograma</a></li></ul></li><li><a href="articulos.html">Artículos</a></li><li><a href="acerca.html">Acerca de</a></li><li><a href="servicios.html">Servicios</a></li><li><a href="contacto.html">Contacto</a></li><li><a href="../index.html" class="lang" hreflang="en" title="Read in English">EN</a></li></ul></nav>
 </header>
 <section class="hero">
   <div class="hero-l">
@@ -80,7 +80,7 @@
 </div>
 
 
-<section class="sec-tight forecast-review-entry" aria-labelledby="forecast-review-heading"><div class="wrap"><div class="fc-entry"><div><div class="eyebrow">Revisión guiada gratuita del cronograma</div><h2 class="display" id="forecast-review-heading">¿Puedes confiar en la fecha de finalización de tu proyecto?</h2><p>Antes de la próxima reunión de avance, abre tu cronograma y sigue 15 comprobaciones prácticas. Descubre dónde mirar y qué comprobar; recibe cinco prioridades para llevar a la reunión.</p><div class="fc-entry-trust">Gratis con registro de correo · Sin cuenta · Sin cargar archivos</div></div><div class="fc-entry-actions"><a href="revisar-prevision.html" class="btn btn-solid">Comenzar mi revisión guiada<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a><a href="revisar-prevision.html?resource=checklist" class="fc-checklist-link">Ver la lista imprimible</a></div></div></div></section>
+
 <section class="teaser rv teaser-alt"><div class="teaser-body">
       <div class="eyebrow">Diagnóstico gratuito</div>
       <h3 class="display">¿A dónde se va el tiempo de tu proyecto?</h3>
@@ -99,7 +99,7 @@
         <div class="o">Más de dos días</div>
         <div class="r">Son aproximadamente <b>18 días laborables al año</b> solo en el informe.</div>
       </div>
-    </div></section>
+    </div></section><section class="sec-tight forecast-review-entry" aria-labelledby="forecast-review-heading"><div class="wrap"><div class="fc-entry"><div><div class="eyebrow">Revisión gratuita del cronograma</div><h2 class="display" id="forecast-review-heading">¿Puedes confiar en la fecha de fin de tu proyecto?</h2><p>Mira las señales de alerta en cómo está construido tu cronograma: fechas escritas a mano, cabos sueltos, holgura negativa, ruta crítica rota. Dos maneras de hacerlo, las dos gratis.</p><div class="fc-entry-trust">Sin cuenta · Tu archivo nunca se sube a ningún servidor</div></div><div class="fc-entry-actions"><a href="verificador-cronograma.html" class="btn btn-solid">Revisar mi archivo de cronograma<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a><span class="fc-alt">¿No puedes compartir el archivo o no usas MS Project?<br><a href="revisar-prevision.html" class="fc-checklist-link">Haz la revisión guiada</a></span></div></div></div></section>
 
 
 <section class="teaser rv"><div class="teaser-img"><img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1000&auto=format&fit=crop&q=80" alt="" loading="lazy"><div class="teaser-stamp"><span class="dot dot-live"></span>EN LÍNEA</div></div><div class="teaser-body">
@@ -240,7 +240,7 @@ document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});})();
 <script src="../newsletter.js" defer></script>
 <style>.nav .nav-links a.on{color:var(--purple,#6C4EE3);font-weight:600;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:9px}</style>
 <script>(function(){var p=location.pathname.split('/').pop()||'index.html';p=p.replace(/\.html$/,'')+'.html';
-var alias={'article-audit.html':'knowledge.html','article-float.html':'knowledge.html','article-silence.html':'knowledge.html','articulo-auditoria.html':'articulos.html','articulo-holgura.html':'articulos.html','articulo-silencio.html':'articulos.html','forecast-check.html':'resources.html','revisar-prevision.html':'recursos.html'};
+var alias={'article-audit.html':'knowledge.html','article-float.html':'knowledge.html','article-silence.html':'knowledge.html','articulo-auditoria.html':'articulos.html','articulo-holgura.html':'articulos.html','articulo-silencio.html':'articulos.html','forecast-check.html':'diagnostic.html','revisar-prevision.html':'diagnostico.html'};
 var t=alias[p]||p,links=document.querySelectorAll('#navlinks a');
 links.forEach(function(a){var h=(a.getAttribute('href')||'').split('/').pop();if(h===t&&!a.classList.contains('lang')){a.classList.add('on');a.setAttribute('aria-current','page');var d=a.closest('.nav-dropdown');if(d)d.querySelector('a').classList.add('on');}});})();</script>
 </body></html>

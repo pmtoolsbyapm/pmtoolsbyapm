@@ -70,6 +70,7 @@
         },
         fix: 'A schedule earns its keep when it shows, every week, which activities are driving the finish and what needs attention before the next meeting. That is a habit as much as a tool, but the tool has to make it easy enough to keep.',
         tools: [
+          { name: 'Free Schedule Checker', what: 'Start here: open your MS Project file and see in seconds whether the finish date is calculated or typed, where the open ends are and which activities already have negative float. Your file never leaves your computer.', href: 'schedule-checker.html', cta: 'Check my schedule' },
           { name: 'Project Scheduler', what: 'Critical path, float and the driving activities explained in plain language. A health check that flags missing logic and progress shortfalls, and two- and four-week look-aheads for the site meeting. No MS Project or P6 course required.', href: 'scheduler.html', cta: 'See the Scheduler' },
           { name: 'Free schedule template', what: 'If you want to start with a spreadsheet, the free construction schedule template includes a 10-point health check.', href: 'resources.html', cta: 'Get the template' }
         ]
@@ -243,6 +244,7 @@
         },
         fix: 'Un cronograma vale la pena cuando muestra, cada semana, qué actividades están definiendo la fecha de terminación y qué necesita atención antes de la siguiente reunión. Es tanto un hábito como una herramienta, pero la herramienta tiene que hacerlo lo bastante fácil para sostenerlo.',
         tools: [
+          { name: 'Verificador gratuito de cronogramas', what: 'Empieza aquí: abre tu archivo de MS Project y ve en segundos si la fecha de fin está calculada o escrita, dónde están los cabos sueltos y qué actividades ya tienen holgura negativa. Tu archivo nunca sale de tu computadora.', href: 'verificador-cronograma.html', cta: 'Revisar mi cronograma' },
           { name: 'Planificador', what: 'Ruta crítica, holgura y las actividades que mandan, explicadas en lenguaje claro. Una revisión de salud que señala lógica faltante y avances por debajo de lo previsto, y programaciones a dos y cuatro semanas para la reunión de obra. Sin curso de MS Project ni de P6.', href: 'planificador.html', cta: 'Ver el Planificador' },
           { name: 'Plantilla gratuita de cronograma', what: 'Si prefieres empezar con una hoja de cálculo, la plantilla gratuita de cronograma de obra incluye una revisión de 10 puntos.', href: 'recursos.html', cta: 'Obtener la plantilla' }
         ]

@@ -34,6 +34,7 @@
 <style>.nav .nav-dropdown{position:relative}.nav .dropdown-menu{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:8px 0;min-width:180px;box-shadow:0 8px 24px rgba(0,0,0,.1);z-index:210;list-style:none;margin:0}.nav .dropdown-menu li a{display:block;padding:10px 18px;color:#17212b;text-decoration:none;white-space:nowrap}.nav .dropdown-menu li a:hover{background:#f3f0fb;color:#6842b8}.nav .nav-dropdown:hover .dropdown-menu,.nav .nav-dropdown:focus-within .dropdown-menu{display:block}
 @media(max-width:1000px){.nav{padding:0 1.25rem}.nav .burger{display:block}.nav .nav-links{display:none;position:fixed;top:66px;left:0;right:0;background:#fff;border-bottom:1px solid #E4E4EF;flex-direction:column;align-items:stretch;gap:0;padding:.5rem 0;max-height:calc(100dvh - 66px);overflow-y:auto}.nav .nav-links.open{display:flex}.nav .nav-links li{border-bottom:1px solid #E4E4EF}.nav .nav-links a{display:block;padding:.85rem 1.25rem}.nav .dropdown-menu{position:static;box-shadow:none;border:0;border-radius:0}.nav .dropdown-menu li a{padding:.65rem 2rem}.nav .nav-links .lang{display:inline-block;margin:.5rem 1.25rem;padding:.28rem .5rem}.nav .nav-links li:last-child{padding:0}}
 </style>
+<link rel="stylesheet" href="../forecast-links.css">
 </head>
 <body>
 <header class="nav">
@@ -41,7 +42,7 @@
   <button class="burger" aria-label="Menú" aria-expanded="false" id="burger">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
   </button>
-  <nav><ul class="nav-links" id="navlinks"><li class="nav-dropdown"><a href="#">Productos ▾</a><ul class="dropdown-menu"><li><a href="planificador.html">Planificador</a></li><li><a href="kit-inicial.html">PM Starter Kit</a></li><li><a href="../risk.html">Chequeo de riesgos</a></li><li><a href="buildtrack.html">BuildTrack</a></li><li><a href="https://cost-management.pmtoolsbyapm.com/welcome.html">Cost Management</a></li></ul></li><li><a href="recursos.html">Recursos</a></li><li><a href="diagnostico.html">Diagnóstico</a></li><li><a href="articulos.html">Artículos</a></li><li><a href="acerca.html">Acerca de</a></li><li><a href="servicios.html">Servicios</a></li><li><a href="contacto.html">Contacto</a></li><li><a href="../diagnostic.html" class="lang" hreflang="en" title="Read in English">EN</a></li></ul></nav>
+  <nav><ul class="nav-links" id="navlinks"><li class="nav-dropdown"><a href="#">Productos ▾</a><ul class="dropdown-menu"><li><a href="planificador.html">Planificador</a></li><li><a href="kit-inicial.html">PM Starter Kit</a></li><li><a href="../risk.html">Chequeo de riesgos</a></li><li><a href="buildtrack.html">BuildTrack</a></li><li><a href="https://cost-management.pmtoolsbyapm.com/welcome.html">Cost Management</a></li></ul></li><li><a href="recursos.html">Recursos</a></li><li class="nav-dropdown"><a href="diagnostico.html">Diagnóstico ▾</a><ul class="dropdown-menu"><li><a href="diagnostico.html">Diagnóstico del proyecto</a></li><li><a href="verificador-cronograma.html">Verificador de cronogramas</a></li><li><a href="revisar-prevision.html">Revisión guiada del cronograma</a></li></ul></li><li><a href="articulos.html">Artículos</a></li><li><a href="acerca.html">Acerca de</a></li><li><a href="servicios.html">Servicios</a></li><li><a href="contacto.html">Contacto</a></li><li><a href="../diagnostic.html" class="lang" hreflang="en" title="Read in English">EN</a></li></ul></nav>
 </header>
 
 <section class="phead dx-head">
@@ -92,6 +93,7 @@
     </div>
   </div>
 </section>
+<section class="sec-tight forecast-review-entry" aria-labelledby="forecast-review-heading"><div class="wrap"><div class="fc-entry"><div><div class="eyebrow">¿Ya sabes que el problema es el cronograma?</div><h2 class="display" id="forecast-review-heading">¿Puedes confiar en la fecha de fin de tu proyecto?</h2><p>Mira las señales de alerta en cómo está construido tu cronograma: fechas escritas a mano, cabos sueltos, holgura negativa, ruta crítica rota. Dos maneras de hacerlo, las dos gratis.</p><div class="fc-entry-trust">Sin cuenta · Tu archivo nunca se sube a ningún servidor</div></div><div class="fc-entry-actions"><a href="verificador-cronograma.html" class="btn btn-solid">Revisar mi archivo de cronograma<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a><span class="fc-alt">¿No puedes compartir el archivo o no usas MS Project?<br><a href="revisar-prevision.html" class="fc-checklist-link">Haz la revisión guiada</a></span></div></div></div></section>
 <footer class="foot">
   <div class="foot-top">
     <div class="foot-brand">
@@ -146,7 +148,7 @@ document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});})();
 <script src="../diagnostic.js" defer></script>
 <style>.nav .nav-links a.on{color:var(--purple,#6C4EE3);font-weight:600;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:9px}</style>
 <script>(function(){var p=location.pathname.split('/').pop()||'index.html';p=p.replace(/\.html$/,'')+'.html';
-var alias={'article-audit.html':'knowledge.html','article-float.html':'knowledge.html','article-silence.html':'knowledge.html','articulo-auditoria.html':'articulos.html','articulo-holgura.html':'articulos.html','articulo-silencio.html':'articulos.html','forecast-check.html':'resources.html','revisar-prevision.html':'recursos.html'};
+var alias={'article-audit.html':'knowledge.html','article-float.html':'knowledge.html','article-silence.html':'knowledge.html','articulo-auditoria.html':'articulos.html','articulo-holgura.html':'articulos.html','articulo-silencio.html':'articulos.html','forecast-check.html':'diagnostic.html','revisar-prevision.html':'diagnostico.html'};
 var t=alias[p]||p,links=document.querySelectorAll('#navlinks a');
 links.forEach(function(a){var h=(a.getAttribute('href')||'').split('/').pop();if(h===t&&!a.classList.contains('lang')){a.classList.add('on');a.setAttribute('aria-current','page');var d=a.closest('.nav-dropdown');if(d)d.querySelector('a').classList.add('on');}});})();</script>
 </body></html>
