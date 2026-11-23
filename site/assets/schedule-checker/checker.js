@@ -31,7 +31,7 @@
   function detail(c, r) {
     switch (c.key) {
       case 'typed':
-        if (c.status === 'pass') return L('No manually scheduled activities and no hard constraints. Dates are driven by links.', 'Sin actividades programadas manualmente ni restricciones rígidas. Las fechas las determinan las relaciones.') + (c.soft ? ' ' + L(`${c.soft} “start/finish no earlier than” constraints: confirm each one has a reason.`, `${c.soft} restricciones “no comenzar/terminar antes de”: confirma que cada una tiene un motivo.`) : '');
+        if (c.status === 'pass') return L('No manually scheduled activities and no hard constraints. Dates are driven by links.', 'Sin actividades programadas manualmente ni restricciones rígidas. Las fechas las determinan las relaciones.') + (c.soft ? ' ' + L(`${c.soft} “start/finish no earlier than” ${n(c.soft, 'constraint', 'constraints')}: confirm ${n(c.soft, 'it has', 'each one has')} a reason.`, `${c.soft} ${n(c.soft, 'restricción', 'restricciones')} “no comenzar/terminar antes de”: confirma que ${n(c.soft, 'tiene', 'cada una tiene')} un motivo.`) : '');
         return `<b>${L(`${c.manual} manually scheduled ${n(c.manual, 'activity', 'activities')} and ${c.hard} hard ${n(c.hard, 'constraint', 'constraints')}.`, `${c.manual} ${n(c.manual, 'actividad programada', 'actividades programadas')} manualmente y ${c.hard} ${n(c.hard, 'restricción rígida', 'restricciones rígidas')}.`)}</b> ${L('These dates will not react when work runs late.', 'Estas fechas no reaccionan cuando el trabajo se atrasa.')}${list(c.items)}`;
       case 'open':
         if (c.status === 'pass') return L('Every activity has a predecessor and a successor, apart from the start and the finish.', 'Toda actividad tiene predecesora y sucesora, salvo el inicio y el fin.');
@@ -117,7 +117,7 @@
       return box(L('WATCH THESE', 'VIGILA ESTAS'),
         L(`${h.near} ${n(h.near, 'activity is', 'activities are')} one bad week away from becoming critical.`, `${h.near} ${n(h.near, 'actividad está', 'actividades están')} a una mala semana de volverse críticas.`),
         L('The critical path is rarely where the next delay comes from. It comes from the activity that had five days of float last month and two this month. List these at every update.', 'La ruta crítica rara vez es de donde viene el próximo retraso. Viene de la actividad que tenía cinco días de holgura el mes pasado y dos este mes. Revísalas en cada actualización.'),
-        h.nearItems.map(a => row(act(a), `${a.tf} d`)).join(''));
+        h.nearItems.map(a => row(act(a), `${a.tf} d`)).join('') + (h.near > h.nearItems.length ? row(L(`and ${h.near - h.nearItems.length} more`, `y ${h.near - h.nearItems.length} más`), '') : ''));
     }
     return '';
   }
