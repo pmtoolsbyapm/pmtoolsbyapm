@@ -344,7 +344,7 @@
     } else if (floatValid) {
       const near = work.filter(t => T.get(t.uid).tf > 0.5 && T.get(t.uid).tf <= 5);
       const margin = finishDl ? finishDl.margin : null;
-      head = { kind: 'ontime', finish: finishDay, deadline: finishDl, margin, near: near.length, nearItems: near.slice(0, 6).map(t => ({ ...name(t.uid), tf: Math.round(T.get(t.uid).tf) })) };
+      head = { kind: 'ontime', finish: finishDay, deadline: finishDl, margin, near: near.length, nearItems: near.slice(0, 12).map(t => ({ ...name(t.uid), tf: Math.round(T.get(t.uid).tf) })) };
     } else {
       head = { kind: 'datelist', test: delayTest(pickEarly) };
     }
