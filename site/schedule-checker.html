@@ -12,10 +12,10 @@
 <section id="intro" class="intro">
 <div><div class="eyebrow">Free schedule checker</div><h1>Is your finish date <span>calculated, or typed?</span></h1><p class="lead">Drop in your MS Project schedule. In seconds you’ll see the red flags in how it is built, on your own activities: typed dates, open ends, negative float, a broken critical path, a missing baseline.</p><div class="trust"><span>No sign-up</span><span>Nothing is uploaded</span><span>Works in your browser</span></div></div>
 <div id="drop" class="drop">
-<h2>Drop your schedule here</h2><p>MS Project file saved as XML (.xml)</p>
+<h2>Drop your schedule here</h2><p>MS Project file saved as XML (.xml)</p><p class="safe">Your file is read here, in your browser. It is not uploaded, stored or seen by anyone, including me.</p>
 <label class="btn primary" style="margin-top:10px">Choose a file<input id="file" type="file" accept=".xml,.xer,.mpp" hidden></label>
 <p class="mono" style="font-size:12px;margin-top:12px">Primavera P6 (.xer): coming soon.</p>
-<details class="how"><summary>How to save your schedule as XML</summary><ol><li>In MS Project, open your schedule.</li><li>File › Save As › choose “XML Format (*.xml)”.</li><li>Drop the .xml file here.</li></ol></details>
+<details class="how"><summary>How to save your schedule as XML</summary><ol><li>In MS Project, open your schedule.</li><li>File › Save As › choose “XML Format (*.xml)”.</li><li>Drop the .xml file here.</li></ol></details><details class="how"><summary>Is my file safe?</summary><ol><li><strong>Test it yourself.</strong> Load this page, turn off your Wi-Fi, then check your file. It still works, because nothing goes to a server.</li><li><strong>Want to be extra careful?</strong> Save a copy, replace the activity names with codes, and check the copy. Every check still runs; the findings will show activity IDs instead of names.</li><li><strong>Not ready to use your own file?</strong> Try one of the sample schedules below first to see the kind of finding you get.</li><li>No sign-up and no email. The report stays on your screen until you close the page.</li></ol></details>
 <div id="err" class="err hide" role="alert"></div>
 <div class="samples">No file at hand? Try an example:<div class="row">
 <button type="button" data-sample="/assets/schedule-checker/samples/road-first-build.xml" data-name="Road_Rehab_First_Build.xml">A linked schedule that finishes late</button>
