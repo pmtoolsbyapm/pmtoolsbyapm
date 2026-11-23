@@ -135,4 +135,9 @@ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isInter
 document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});})();
 </script>
 <script src="../newsletter.js" defer></script>
+<style>.nav .nav-links a.on{color:var(--purple,#6C4EE3);font-weight:600;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:9px}</style>
+<script>(function(){var p=location.pathname.split('/').pop()||'index.html';p=p.replace(/\.html$/,'')+'.html';
+var alias={'article-audit.html':'knowledge.html','article-float.html':'knowledge.html','article-silence.html':'knowledge.html','articulo-auditoria.html':'articulos.html','articulo-holgura.html':'articulos.html','articulo-silencio.html':'articulos.html','forecast-check.html':'resources.html','revisar-prevision.html':'recursos.html'};
+var t=alias[p]||p,links=document.querySelectorAll('#navlinks a');
+links.forEach(function(a){var h=(a.getAttribute('href')||'').split('/').pop();if(h===t&&!a.classList.contains('lang')){a.classList.add('on');a.setAttribute('aria-current','page');var d=a.closest('.nav-dropdown');if(d)d.querySelector('a').classList.add('on');}});})();</script>
 </body></html>
