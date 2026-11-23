@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#6c4ee3">
+<title>Free Schedule Checker: Find the Red Flags in Your MS Project Schedule | PM Tools by a PM</title><meta name="description" content="Drop in your MS Project file (saved as XML) and see, in seconds, the red flags in how your schedule is built: typed dates, open ends, negative float, broken critical path. Free. Your file never leaves your computer.">
+<link rel="canonical" href="https://www.pmtoolsbyapm.com/schedule-checker.html"><link rel="alternate" hreflang="en" href="https://www.pmtoolsbyapm.com/schedule-checker.html"><link rel="alternate" hreflang="es" href="https://www.pmtoolsbyapm.com/es/verificador-cronograma.html">
+<meta property="og:type" content="website"><meta property="og:title" content="Free Schedule Checker: Find the Red Flags in Your MS Project Schedule | PM Tools by a PM"><meta property="og:description" content="Drop in your MS Project file (saved as XML) and see, in seconds, the red flags in how your schedule is built: typed dates, open ends, negative float, broken critical path. Free. Your file never leaves your computer."><meta property="og:url" content="https://www.pmtoolsbyapm.com/schedule-checker.html"><meta property="og:image" content="https://www.pmtoolsbyapm.com/images/share-schedule-review-en.jpg"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/images/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/schedule-checker/checker.css?v=20261123"></head>
+<body>
+<header class="top"><div class="wrap topin"><a class="brand" href="/index.html"><img src="/images/logo-mark.png" alt="" width="40" height="40"><span>PM Tools <small>by a PM</small></span></a>
+<div class="topr"><span class="pill">FREE TOOL</span><a class="lang" href="/es/verificador-cronograma.html">ES ↗</a></div></div></header>
+<main class="wrap">
+<section id="intro" class="intro">
+<div><div class="eyebrow">Free schedule checker</div><h1>Is your finish date <span>calculated, or typed?</span></h1><p class="lead">Drop in your MS Project schedule. In seconds you’ll see the red flags in how it is built, on your own activities: typed dates, open ends, negative float, a broken critical path, a missing baseline.</p><div class="trust"><span>No sign-up</span><span>Nothing is uploaded</span><span>Works in your browser</span></div></div>
+<div id="drop" class="drop">
+<h2>Drop your schedule here</h2><p>MS Project file saved as XML (.xml)</p>
+<label class="btn primary" style="margin-top:10px">Choose a file<input id="file" type="file" accept=".xml,.xer,.mpp" hidden></label>
+<p class="mono" style="font-size:12px;margin-top:12px">Primavera P6 (.xer): coming soon.</p>
+<details class="how"><summary>How to save your schedule as XML</summary><ol><li>In MS Project, open your schedule.</li><li>File › Save As › choose “XML Format (*.xml)”.</li><li>Drop the .xml file here.</li></ol></details>
+<div id="err" class="err hide" role="alert"></div>
+<div class="samples">No file at hand? Try an example:<div class="row">
+<button type="button" data-sample="/assets/schedule-checker/samples/road-first-build.xml" data-name="Road_Rehab_First_Build.xml">A linked schedule that finishes late</button>
+<button type="button" data-sample="/assets/schedule-checker/samples/road-typed-dates.xml" data-name="Road_Rehab_Typed_Dates.xml">A schedule with typed dates</button>
+<button type="button" data-sample="/assets/schedule-checker/samples/road-corrected.xml" data-name="Road_Rehab_Corrected.xml">The corrected schedule</button>
+</div></div>
+</div>
+</section>
+<div id="result" class="hide"></div>
+<footer class="foot"><span>PM Tools by a PM · pmtoolsbyapm.com</span><span>Checks how the schedule file is built, not whether the construction sequence is right.</span></footer>
+</main>
+<script src="/assets/schedule-checker/core.js?v=20261123"></script>
+<script src="/assets/schedule-checker/checker.js?v=20261123"></script>
+</body></html>
