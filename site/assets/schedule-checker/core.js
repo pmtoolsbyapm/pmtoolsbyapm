@@ -340,7 +340,7 @@
       }
       const worstChain = work.filter(t => Math.abs(T.get(t.uid).tf - worst) < 0.5).sort((a, b) => T.get(a.uid).es - T.get(b.uid).es);
       const dlLate = finishDl ? finishDl.late : finishLate;
-      head = { kind: 'late', late: Math.max(dlLate, Math.round(-worst)), dlLate, worstLate: finishLate, finish: finishDay, deadline: finishDl, gap,
+      head = { kind: 'late', late: dlLate > 0 ? dlLate : Math.round(-worst), dlLate, worstLate: finishLate, finish: finishDay, deadline: finishDl, gap,
         chain: worstChain.slice(-4).map(t => ({ ...name(t.uid), tf: Math.round(T.get(t.uid).tf) })) };
     } else if (floatValid) {
       const near = work.filter(t => T.get(t.uid).tf > 0.5 && T.get(t.uid).tf <= 5);
